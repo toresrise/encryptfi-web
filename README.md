@@ -1,7 +1,7 @@
-<h1 align="center">Encryptfi</h1>
+<h1 align="center">Encryptfi (Web)</h1>
 
 <p align="center">
-    <img align="center" src="src/assets/logo.png" width="16%" alt="Encryptfi logo" />
+    <img align="center" src="src/assets/logo.png" width="12%" alt="Encryptfi logo" />
     <br>
     <br>
     <i>A simple, transparent, anonymous and secure way to transfer files.</i>
