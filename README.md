@@ -1,7 +1,11 @@
-<img align="right" src="src/assets/logo.png" width="16%" alt="Encryptfi logo" />
+<h1 align="center">Encryptfi</h1>
 
-# Encryptfi
-A simple, transparent, anonymous and secure way to transfer files.
+<p align="center">
+    <img align="center" src="src/assets/logo.png" width="16%" alt="Encryptfi logo" />
+    <br>
+    <br>
+    <i>A simple, transparent, anonymous and secure way to transfer files.</i>
+</p>
 
 ## Setup project
 Follow all commands bellow.
