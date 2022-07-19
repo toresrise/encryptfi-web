@@ -7,6 +7,8 @@
     <i>A simple, transparent, anonymous and secure way to transfer files.</i>
 </p>
 
+<hr>
+
 ## Setup project
 Follow all commands bellow.
 
