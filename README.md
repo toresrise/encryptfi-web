@@ -23,9 +23,14 @@ VITE_API_URL=YOUR_API_URL_HERE
 yarn
 ```
 
-### Start project
+### Start
 ```
 yarn dev
+```
+
+### Build
+```
+yarn build
 ```
 
 ## Setup IntelliJ
@@ -62,7 +67,7 @@ yarn prettier
 yarn prettier:fix
 ```
 
-## Format code (fix lint and prettier)
+## Format code
 ```
 yarn format
 ```
