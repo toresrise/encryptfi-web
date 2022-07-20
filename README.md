@@ -9,6 +9,7 @@
 
 <hr>
 
+## Deploy
 ![Netlify Status](https://api.netlify.com/api/v1/badges/778b09ca-7110-4e31-ae1d-be841932adad/deploy-status)
 
 ## Setup project
