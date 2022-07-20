@@ -9,7 +9,7 @@
 
 <hr>
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/778b09ca-7110-4e31-ae1d-be841932adad/deploy-status)](https://app.netlify.com/sites/shimmering-kulfi-dea3f6/deploys)
+![Netlify Status](https://api.netlify.com/api/v1/badges/778b09ca-7110-4e31-ae1d-be841932adad/deploy-status)
 
 ## Setup project
 Follow all commands bellow.
