@@ -1,0 +1,64 @@
+@use 'mixins';
+
+@import 'reset';
+
+:root {
+    --color-white: #fdfffc;
+    --color-black: #0b0a0a;
+    --color-primary: #54f2f2;
+    --color-secondary: #042a2b;
+    --color-text: var(--color-black);
+    --one-space: 4px;
+    --ms-transition: 200ms;
+}
+
+html,
+body,
+#root {
+    font-family: 'Inter', sans-serif;
+    height: 100%;
+    color: var(--color-text);
+    background-color: var(--color-background);
+    line-height: 1.2;
+    overflow-x: hidden;
+}
+
+html,
+body {
+    font-size: 16px;
+
+    @include mixins.sm {
+        font-size: 14px;
+    }
+}
+
+#root {
+    font-size: 1rem;
+}
+
+* {
+    transition-duration: var(--ms-transition);
+    outline: none;
+    color: var(--color-text);
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    transition: color, background-color, border-bottom-color, border-left-color, border-right-color, border-top-color, box-shadow;
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+.title {
+    font-family: 'Lobster', cursive;
+}
+
+::-moz-selection {
+    @include mixins.selection;
+}
+
+::selection {
+    @include mixins.selection;
+}

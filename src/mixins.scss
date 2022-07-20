@@ -1,0 +1,12 @@
+@use 'variables';
+
+@mixin selection {
+    background: var(--color-primary);
+    color: var(--color-text);
+}
+
+@mixin sm {
+    @media (variables.$mobile-break) {
+        @content;
+    }
+}
