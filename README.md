@@ -26,6 +26,11 @@ VITE_API_URL=YOUR_API_URL_HERE
 yarn
 ```
 
+### Active Husky hooks (if not automatically configured)
+```
+yarn husky install
+```
+
 ### Start
 ```
 yarn dev
