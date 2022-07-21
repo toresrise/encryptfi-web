@@ -8,6 +8,7 @@
     --color-primary: #54f2f2;
     --color-secondary: #042a2b;
     --color-text: var(--color-black);
+    --color-background: var(--color-white);
     --one-space: 4px;
     --ms-transition: 200ms;
 }
@@ -43,7 +44,8 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    transition: color, background-color, border-bottom-color, border-left-color, border-right-color, border-top-color, box-shadow;
+    transition: color, background-color, border-bottom-color, border-left-color, border-right-color,
+        border-top-color, box-shadow;
 }
 
 img {
