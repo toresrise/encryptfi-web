@@ -83,5 +83,5 @@ yarn format
 ## Community
 Our code can be copied and distributed for everybody. If you find a bug or improvement, report an [issue](https://github.com/toresrise/encryptfi-web/issues), please.
 
-## Authors
-- João Paulo Hotequil ([personal site](https://hotequil.tech))
+## Documentation authors
+- João Paulo Hotequil ([site](https://hotequil.tech))
