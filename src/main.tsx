@@ -9,7 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <BrowserRouter>
             <Routes>
                 <Route element={<App />}>
-                    <Route path='/' element={<h1>Encryptfi</h1>} />
+                    <Route path='/' element={<h1>TODO MAIN</h1>} />
                 </Route>
             </Routes>
         </BrowserRouter>
