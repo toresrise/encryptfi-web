@@ -1,7 +1,7 @@
 <h1 align="center">Encryptfi (Web)</h1>
 
 <p align="center">
-    <img align="center" src="src/assets/images/logo.png" width="12%" alt="Encryptfi logo" />
+    <img align="center" src="./src/assets/images/logo.png" width="12%" alt="Encryptfi logo" />
     <br>
     <br>
     <i>A simple, transparent, anonymous and secure way to transfer files.</i>
@@ -84,4 +84,4 @@ yarn format
 Our code can be copied and distributed for everybody. If you find a bug or improvement, report an [issue](https://github.com/toresrise/encryptfi-web/issues), please.
 
 ## Documentation authors
-- João Paulo Hotequil ([site](https://hotequil.tech))
+- João Paulo Hotequil ([website](https://hotequil.tech))
