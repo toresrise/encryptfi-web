@@ -12,6 +12,10 @@
 ## Status
 [![Netlify deploy status](https://api.netlify.com/api/v1/badges/778b09ca-7110-4e31-ae1d-be841932adad/deploy-status)](https://app.netlify.com/sites/shimmering-kulfi-dea3f6/deploys)
 
+## Install prerequisites
+- [NodeJS and NPM](https://nodejs.org/en/download)
+- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install)
+
 ## Setup project
 Follow all commands bellow.
 
@@ -79,6 +83,9 @@ yarn prettier:fix
 ```
 yarn format
 ```
+
+## Figma (prototype)
+See application components in our [Figma project](https://www.figma.com/file/SADKp23JNkpiVvhJsRZFAk/Web).
 
 ## Community
 Our code can be copied and distributed for everybody. If you find a bug or improvement, report an [issue](https://github.com/toresrise/encryptfi-web/issues), please.
