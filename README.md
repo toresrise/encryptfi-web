@@ -45,7 +45,7 @@ yarn dev
 yarn build
 ```
 
-## Setup IntelliJ
+## Setup JetBrains (IDE)
 
 ### Configure lint
 Go to `File > Settings > Languages & Frameworks > JavaScript > Code Quality Tools > ESLint`, select **Automatic ESLint configuration** and check **Run eslint --fix on save**.
