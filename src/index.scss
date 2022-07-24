@@ -9,8 +9,6 @@
     --color-dark-grey: #333533;
     --color-primary: #A72CF4;
     --color-secondary: #6600A5;
-    --color-text: var(--color-black);
-    --color-background: var(--color-white);
     --one-space: 4px;
     --ms-transition: 200ms;
 }
@@ -20,10 +18,18 @@ body,
 #root {
     font-family: 'Inter', sans-serif;
     height: 100%;
-    color: var(--color-text);
-    background-color: var(--color-background);
     line-height: 1.2;
     overflow-x: hidden;
+
+    @include mixins.dark-theme{
+        color: var(--color-white);
+        background-color: var(--color-black);
+    }
+
+    @include mixins.light-theme{
+        color: var(--color-black);
+        background-color: var(--color-white);
+    }
 }
 
 html,
@@ -40,14 +46,21 @@ body {
 }
 
 * {
-    transition-duration: var(--ms-transition);
     outline: none;
-    color: var(--color-text);
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    transition-duration: var(--ms-transition);
     transition: color, background-color, border-bottom-color, border-left-color, border-right-color,
         border-top-color, box-shadow;
+
+    @include mixins.dark-theme{
+        color: var(--color-white);
+    }
+
+    @include mixins.light-theme{
+        color: var(--color-black);
+    }
 }
 
 img {
