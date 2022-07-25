@@ -23,6 +23,8 @@ Follow all commands bellow.
 Create .env file in root folder with content.
 ```
 VITE_API_URL=YOUR_API_URL_HERE
+VITE_LOCAL_STORAGE_PREFIX=YOUR_LOCAL_STORAGE_PREFIX_HERE
+VITE_LANG_KEY=YOUR_LANG_KEY_HERE
 ```
 
 ### Install packages
