@@ -1,4 +1,4 @@
-<p align="center"><img align="center" src="./src/assets/images/logo.png" width="224px" alt="Encryptfi logo" /></p>
+<img src="./src/assets/images/logo.png" width="168px" alt="Encryptfi logo" />
 
 # Encryptfi (Web)
 A simple, transparent, anonymous and secure way to transfer files.
