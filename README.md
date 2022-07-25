@@ -1,12 +1,15 @@
-<p align="center"><img align="center" src="./src/assets/images/logo.png" width="158px" alt="Encryptfi logo" /></p>
-
-# Encryptfi (Web)
-A simple, transparent, anonymous and secure way to transfer files.
-
-![Netlify deploy status](https://api.netlify.com/api/v1/badges/778b09ca-7110-4e31-ae1d-be841932adad/deploy-status)
-[![GitHub license](https://img.shields.io/github/license/toresrise/encryptfi-web)](https://github.com/toresrise/encryptfi-web/blob/main/LICENSE)
-![GitHub repository size](https://img.shields.io/github/repo-size/toresrise/encryptfi-web)
-[![Code style is Prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
+<p align="center">
+    <img align="center" src="./src/assets/images/logo.png" width="158px" alt="Encryptfi logo" />
+    <br>
+    <h1 align="center">Encryptfi (Web)</h1>
+    <p align="center">A simple, transparent, anonymous and secure way to transfer files.</p>
+    <p align="center">
+        <img align="center" src="https://api.netlify.com/api/v1/badges/778b09ca-7110-4e31-ae1d-be841932adad/deploy-status" alt="Netlify deploy status" />
+        <a href="https://github.com/toresrise/encryptfi-web/blob/main/LICENSE" target="_blank"><img align="center" src="https://img.shields.io/github/license/toresrise/encryptfi-web" alt="GitHub license" /></a>
+        <img align="center" src="https://img.shields.io/github/repo-size/toresrise/encryptfi-web" alt="GitHub repository size" />
+        <a href="https://github.com/prettier/prettier" target="_blank"><img align="center" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg" alt="Code style is Prettier" /></a>
+    </p>
+</p>
 
 <hr>
 
