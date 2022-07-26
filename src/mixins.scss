@@ -1,12 +1,12 @@
 @use 'variables';
 
-@mixin light-theme{
+@mixin light-theme {
     @at-root #{selector-nest('html[data-theme=light]', &)} {
         @content;
     }
 }
 
-@mixin dark-theme{
+@mixin dark-theme {
     @at-root #{selector-nest('html:not([data-theme=light]):not([data-theme=dark])', &)} {
         @content;
     }
@@ -19,11 +19,11 @@
 @mixin selection {
     background: var(--color-primary);
 
-    @include dark-theme{
+    @include dark-theme {
         color: var(--color-white);
     }
 
-    @include light-theme{
+    @include light-theme {
         color: var(--color-black);
     }
 }
