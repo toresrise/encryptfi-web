@@ -14,8 +14,8 @@
 <hr>
 
 ## Install prerequisites
-- [NodeJS and NPM](https://nodejs.org/en/download)
-- [Yarn](https://classic.yarnpkg.com/lang/en/docs/install)
+1. [NodeJS and NPM](https://nodejs.org/en/download)
+2. [Yarn](https://classic.yarnpkg.com/lang/en/docs/install)
 
 ## Setup project
 Follow all commands bellow.
