@@ -51,8 +51,8 @@ body {
     padding: 0;
     margin: 0;
     transition-duration: var(--ms-transition);
-    transition: color, background-color, border-bottom-color, border-left-color, border-right-color,
-        border-top-color, box-shadow;
+    transition: color, background-color, border-bottom-color, border-left-color, border-right-color, border-top-color,
+        box-shadow;
 
     @include mixins.dark-theme {
         color: var(--color-white);
