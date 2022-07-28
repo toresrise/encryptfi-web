@@ -1,7 +1,12 @@
-let htmlElement: HTMLHtmlElement | null = null;
+import { isString } from '~/helpers/data'
 
-export const getHtmlElement = (): HTMLHtmlElement => {
-    if (!htmlElement) htmlElement = document.querySelector('html') as HTMLHtmlElement;
+let htmlElement: HTMLHtmlElement | null = null
 
-    return htmlElement;
-};
+const getHtmlElement = (): HTMLHtmlElement => {
+    if (!htmlElement) htmlElement = document.querySelector('html') as HTMLHtmlElement
+
+    return htmlElement
+}
+
+export const setHtmlAttr = (key: string, value: any) =>
+    getHtmlElement().setAttribute(key, isString(value) ? value : JSON.stringify(value))

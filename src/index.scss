@@ -5,10 +5,10 @@
 :root {
     --color-white: #fdfffc;
     --color-black: #0b0a0a;
-    --color-grey: #A5A5A5;
+    --color-grey: #a5a5a5;
     --color-dark-grey: #333533;
-    --color-primary: #A72CF4;
-    --color-secondary: #6600A5;
+    --color-primary: #a72cf4;
+    --color-secondary: #6600a5;
     --one-space: 4px;
     --ms-transition: 200ms;
 }
@@ -21,12 +21,12 @@ body,
     line-height: 1.2;
     overflow-x: hidden;
 
-    @include mixins.dark-theme{
+    @include mixins.dark-theme {
         color: var(--color-white);
         background-color: var(--color-black);
     }
 
-    @include mixins.light-theme{
+    @include mixins.light-theme {
         color: var(--color-black);
         background-color: var(--color-white);
     }
@@ -51,14 +51,14 @@ body {
     padding: 0;
     margin: 0;
     transition-duration: var(--ms-transition);
-    transition: color, background-color, border-bottom-color, border-left-color, border-right-color,
-        border-top-color, box-shadow;
+    transition: color, background-color, border-bottom-color, border-left-color, border-right-color, border-top-color,
+        box-shadow;
 
-    @include mixins.dark-theme{
+    @include mixins.dark-theme {
         color: var(--color-white);
     }
 
-    @include mixins.light-theme{
+    @include mixins.light-theme {
         color: var(--color-black);
     }
 }
