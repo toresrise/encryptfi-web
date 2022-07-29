@@ -2,8 +2,9 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { App } from './App'
 import './index.scss'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom'
 import { setupLang } from '~/helpers/lang'
+import { Home } from '~/pages/Home'
 
 setupLang()
 
@@ -12,7 +13,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
         <BrowserRouter>
             <Routes>
                 <Route element={<App />}>
-                    <Route path='/' element={'TODO MAIN'} />
+                    <Route path='/' element={<Home />} />
+                    <Route path='*' element={<Navigate to='/' />} />
                 </Route>
             </Routes>
         </BrowserRouter>
