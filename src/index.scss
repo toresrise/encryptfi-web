@@ -10,6 +10,11 @@
     --color-primary: #a72cf4;
     --color-secondary: #6600a5;
     --one-space: 4px;
+    --half-space: calc(var(--one-space) / 2);
+    --two-spaces: calc(var(--one-space) * 2);
+    --four-spaces: calc(var(--one-space) * 4);
+    --five-spaces: calc(var(--one-space) * 5);
+    --eight-spaces: calc(var(--one-space) * 8);
     --ms-transition: 200ms;
 }
 
@@ -66,10 +71,6 @@ body {
 img {
     pointer-events: none;
     user-select: none;
-}
-
-.title {
-    font-family: 'Lobster', cursive;
 }
 
 ::-moz-selection {

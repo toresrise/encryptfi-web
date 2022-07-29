@@ -1,0 +1,27 @@
+@use "mixins";
+
+@mixin space-page($value) {
+    padding: $value $value 0 $value;
+    row-gap: $value;
+}
+
+.app{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+
+    @include space-page(var(--eight-spaces));
+
+    @include mixins.sm{
+        @include space-page(var(--five-spaces));
+    }
+}
+
+.main{
+    flex-grow: 1;
+    min-height: 1000px;
+
+    @include mixins.md{
+        min-height: auto;
+    }
+}
