@@ -3,5 +3,6 @@ interface ImportMeta {
         VITE_API_URL: string
         VITE_LOCAL_STORAGE_PREFIX: string
         VITE_LANG_KEY: string
+        VITE_THEME_KEY: string
     }
 }
