@@ -17,12 +17,16 @@ export class LangHelper implements Setup<Lang> {
     private readonly LANG_KEY = import.meta.env.VITE_LANG_KEY
 
     init() {
+        const lang = this.get()
+
+        this.set(lang)
+
         i18n.use(initReactI18next).init({
             resources: {
                 [Lang.EN_US]: { translation: enUs },
                 [Lang.PT_BR]: { translation: ptBr },
             },
-            lng: this.get(),
+            lng: lang,
             fallbackLng: Lang.EN_US,
             interpolation: {
                 escapeValue: false,
@@ -31,14 +35,11 @@ export class LangHelper implements Setup<Lang> {
     }
 
     get(): Lang {
-        const lang =
+        return (
             this.getValidLangByPropName(LocalStorage.get<string>(this.LANG_KEY)) ||
             this.getValidLangByPropName(navigator.language) ||
             this.DEFAULT_VALUE
-
-        this.set(lang)
-
-        return lang
+        )
     }
 
     set(lang: Lang) {
