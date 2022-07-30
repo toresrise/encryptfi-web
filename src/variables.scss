@@ -1,2 +1,21 @@
 $mobile-break: 'max-width: 600px';
 $tablet-break: 'max-width: 800px';
+
+:root {
+    --color-white: #fdfffc;
+    --color-black: #0b0a0a;
+    --color-grey: #a5a5a5;
+    --color-dark-grey: #333533;
+    --color-primary: #a72cf4;
+    --color-primary-opacity-24: rgba(167, 44, 244, 0.24);
+    --color-secondary: #6600a5;
+    --color-secondary-opacity-24: rgba(102, 0, 165, 0.24);
+    --one-space: 4px;
+    --half-space: calc(var(--one-space) / 2);
+    --two-spaces: calc(var(--one-space) * 2);
+    --four-spaces: calc(var(--one-space) * 4);
+    --five-spaces: calc(var(--one-space) * 5);
+    --eight-spaces: calc(var(--one-space) * 8);
+    --ms-transition: 200ms;
+    --small-border: 1px solid;
+}
