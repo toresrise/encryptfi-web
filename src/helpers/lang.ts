@@ -12,21 +12,17 @@ export enum Lang {
     PT_BR = 'pt-BR',
 }
 
-export class LangHelper implements Setup {
+export class LangHelper implements Setup<Lang> {
+    readonly DEFAULT_VALUE = Lang.EN_US
     private readonly LANG_KEY = import.meta.env.VITE_LANG_KEY
-    private readonly DEFAULT_LANG = Lang.EN_US
 
-    setup() {
-        const lang = this.getLang()
-
-        setHtmlAttr('lang', lang)
-
+    init() {
         i18n.use(initReactI18next).init({
             resources: {
                 [Lang.EN_US]: { translation: enUs },
                 [Lang.PT_BR]: { translation: ptBr },
             },
-            lng: lang,
+            lng: this.get(),
             fallbackLng: Lang.EN_US,
             interpolation: {
                 escapeValue: false,
@@ -34,19 +30,20 @@ export class LangHelper implements Setup {
         })
     }
 
-    private getLang(): Lang {
+    get(): Lang {
         const lang =
             this.getValidLangByPropName(LocalStorage.get<string>(this.LANG_KEY)) ||
             this.getValidLangByPropName(navigator.language) ||
-            this.DEFAULT_LANG
+            this.DEFAULT_VALUE
 
-        this.setLang(lang)
+        this.set(lang)
 
         return lang
     }
 
-    private setLang(lang: Lang) {
+    set(lang: Lang) {
         LocalStorage.set<string>(this.LANG_KEY, lang)
+        setHtmlAttr('lang', lang)
     }
 
     private getValidLangByPropName(propName: string): Lang | null {
