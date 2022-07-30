@@ -1,0 +1,68 @@
+@use '/src/mixins';
+
+.button {
+    $size: 40px;
+
+    border: var(--small-border) var(--color-primary);
+    min-height: $size;
+    height: fit-content;
+    min-width: 140px;
+    width: fit-content;
+    border-radius: var(--one-space);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    padding: 0 var(--four-spaces);
+
+    @include mixins.md {
+        min-width: $size;
+        padding: 0 var(--two-spaces);
+    }
+
+    svg {
+        $icon: 20px;
+
+        @include mixins.fix-size($icon);
+
+        font-size: $icon;
+    }
+
+    &.primary {
+        background-color: var(--color-primary);
+
+        @include mixins.dark-theme {
+            color: var(--color-white);
+        }
+
+        @include mixins.light-theme {
+            color: var(--color-white);
+        }
+
+        &:hover,
+        &:focus {
+            background-color: var(--color-secondary);
+        }
+    }
+
+    &.outline {
+        background-color: var(--color-primary-opacity-24);
+
+        &:hover,
+        &:focus {
+            background-color: var(--color-secondary-opacity-24);
+        }
+    }
+
+    &.fixSize {
+        @include mixins.fix-size($size);
+    }
+
+    &:hover,
+    &:focus {
+        border-color: var(--color-secondary);
+    }
+}
