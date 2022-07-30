@@ -1,32 +1,33 @@
-@use "src/mixins";
+@use 'src/mixins';
 
-.logo{
+.logo {
     border-radius: var(--half-space);
 
     @include mixins.fix-size(58px);
 
-    @include mixins.sm{
+    @include mixins.sm {
         @include mixins.fix-size(36px);
     }
 }
 
-.title{
+.title {
     @include mixins.title;
 
     font-size: 2.375rem;
     flex-grow: 1;
 
-    @include mixins.sm{
+    @include mixins.sm {
         font-size: 1.85rem;
     }
 }
 
-.header, .actions{
+.header,
+.actions {
     display: flex;
     align-items: center;
     column-gap: var(--four-spaces);
 
-    @include mixins.sm{
+    @include mixins.sm {
         column-gap: var(--two-spaces);
     }
 }
