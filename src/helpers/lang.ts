@@ -5,52 +5,64 @@ import ptBr from '../assets/locales/pt-BR/lang.json'
 import { LocalStorage } from '~/helpers/local-storage'
 import { isString } from '~/helpers/data'
 import { setHtmlAttr } from '~/helpers/dom'
+import { Setup } from '~/types/Setup'
 
 export enum Lang {
     EN_US = 'en-US',
     PT_BR = 'pt-BR',
 }
 
-const LANG_KEY = import.meta.env.VITE_LANG_KEY
-const DEFAULT_LANG = Lang.EN_US
-const setLang = (lang: Lang) => LocalStorage.set<string>(LANG_KEY, lang)
+export class LangHelper implements Setup<Lang> {
+    readonly DEFAULT_VALUE = Lang.EN_US
+    private readonly LANG_KEY = import.meta.env.VITE_LANG_KEY
 
-const validLang = (propName: string): Lang | null => {
-    if (!isString(propName)) propName = ''
+    init() {
+        const lang = this.get()
 
-    let lang: Lang | null = null
-    const hasPropNameLength = propName.length >= 2
-    const initialPropName = propName.slice(0, 2)
+        this.set(lang)
 
-    if (!hasPropNameLength) return lang
-    if (Lang.EN_US.startsWith(initialPropName)) lang = Lang.EN_US
-    if (Lang.PT_BR.startsWith(initialPropName)) lang = Lang.PT_BR
+        i18n.use(initReactI18next).init({
+            resources: {
+                [Lang.EN_US]: { translation: enUs },
+                [Lang.PT_BR]: { translation: ptBr },
+            },
+            lng: lang,
+            fallbackLng: Lang.EN_US,
+            interpolation: {
+                escapeValue: false,
+            },
+        })
+    }
 
-    return lang
-}
+    get(): Lang {
+        return (
+            this.getValidLangByPropName(LocalStorage.get<string>(this.LANG_KEY)) ||
+            this.getValidLangByPropName(navigator.language) ||
+            this.DEFAULT_VALUE
+        )
+    }
 
-export const browserLang = (): Lang => {
-    const lang = validLang(LocalStorage.get<string>(LANG_KEY)) || validLang(navigator.language) || DEFAULT_LANG
+    set(lang: Lang) {
+        LocalStorage.set<string>(this.LANG_KEY, lang)
+        setHtmlAttr('lang', lang)
+    }
 
-    setLang(lang)
+    private getValidLangByPropName(propName: string): Lang | null {
+        if (!isString(propName)) propName = ''
 
-    return lang
-}
+        let lang: Lang | null = null
+        const hasValidPropNameLength = propName.length >= 2
 
-export const setupLang = () => {
-    const lang = browserLang()
+        propName = propName.slice(0, 2)
 
-    setHtmlAttr('lang', lang)
+        if (!hasValidPropNameLength) return lang
+        if (this.langStartsWithPropName(propName, Lang.EN_US)) lang = Lang.EN_US
+        if (this.langStartsWithPropName(propName, Lang.PT_BR)) lang = Lang.PT_BR
 
-    i18n.use(initReactI18next).init({
-        resources: {
-            [Lang.EN_US]: { translation: enUs },
-            [Lang.PT_BR]: { translation: ptBr },
-        },
-        lng: lang,
-        fallbackLng: Lang.EN_US,
-        interpolation: {
-            escapeValue: false,
-        },
-    })
+        return lang
+    }
+
+    private langStartsWithPropName(propName: string, lang: Lang): boolean {
+        return lang.toLowerCase().startsWith(propName.toLowerCase())
+    }
 }

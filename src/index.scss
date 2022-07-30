@@ -10,6 +10,11 @@
     --color-primary: #a72cf4;
     --color-secondary: #6600a5;
     --one-space: 4px;
+    --half-space: calc(var(--one-space) / 2);
+    --two-spaces: calc(var(--one-space) * 2);
+    --four-spaces: calc(var(--one-space) * 4);
+    --five-spaces: calc(var(--one-space) * 5);
+    --eight-spaces: calc(var(--one-space) * 8);
     --ms-transition: 200ms;
 }
 
@@ -50,9 +55,9 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    transition-duration: var(--ms-transition);
     transition: color, background-color, border-bottom-color, border-left-color, border-right-color, border-top-color,
         box-shadow;
+    transition-duration: var(--ms-transition);
 
     @include mixins.dark-theme {
         color: var(--color-white);
@@ -66,10 +71,6 @@ body {
 img {
     pointer-events: none;
     user-select: none;
-}
-
-.title {
-    font-family: 'Lobster', cursive;
 }
 
 ::-moz-selection {
