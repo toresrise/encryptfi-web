@@ -1,6 +1,6 @@
-@use "src/mixins";
+@use 'src/mixins';
 
-.break{
+.break {
     @include mixins.fix-width(100%);
     @include mixins.fix-height(1px);
 
