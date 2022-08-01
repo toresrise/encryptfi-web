@@ -26,7 +26,7 @@
     }
 }
 
-@mixin full-width-page{
+@mixin full-width-page {
     position: relative;
     left: calc(var(--eight-spaces) * -1);
     width: calc(100% + (var(--eight-spaces) * 2));
