@@ -1,0 +1,8 @@
+@use "src/mixins";
+
+.break{
+    @include mixins.fix-width(100%);
+    @include mixins.fix-height(1px);
+
+    background-color: var(--color-dark-grey);
+}
