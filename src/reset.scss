@@ -3,6 +3,7 @@ abbr,
 acronym,
 address,
 applet,
+button,
 article,
 aside,
 audio,
@@ -122,4 +123,9 @@ q {
 table {
     border-collapse: collapse;
     border-spacing: 0;
+}
+
+button, a{
+    background-color: transparent;
+    cursor: pointer;
 }
