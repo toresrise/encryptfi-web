@@ -1,0 +1,70 @@
+@use '/src/mixins';
+
+@mixin select-arrow-right {
+    background-repeat: no-repeat;
+    background-size: var(--one-space) var(--one-space), var(--one-space) var(--one-space);
+
+    $first-position: calc(100% - var(--three-spaces));
+    $second-position: calc(100% - var(--two-spaces));
+    $small-deg: 45deg;
+    $big-deg: 135deg;
+    $percent: 50%;
+    $default-gradient: var(--color-white) $percent;
+    $primary-gradient: var(--color-primary) $percent;
+    $transparent-gradient: transparent $percent;
+
+    background-position: $first-position, $second-position;
+    background-image: linear-gradient(#{$small-deg}, #{$transparent-gradient}, #{$default-gradient}),
+        linear-gradient(#{$big-deg}, #{$default-gradient}, #{$transparent-gradient});
+
+    &:focus {
+        background-position: $second-position, $first-position;
+        background-image: linear-gradient(#{$small-deg}, #{$primary-gradient}, #{$transparent-gradient}),
+            linear-gradient(#{$big-deg}, #{$transparent-gradient}, #{$primary-gradient});
+    }
+}
+
+.select {
+    background-color: var(--color-black);
+    border-radius: var(--one-space);
+    border: var(--small-border) var(--color-dark-grey);
+    padding: var(--four-spaces) var(--six-spaces) var(--four-spaces) var(--two-spaces);
+    font-size: 1.15rem;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    cursor: pointer;
+    line-height: 1.1;
+    outline: none;
+    display: flex;
+    align-items: center;
+    outline: 0;
+    font-weight: 400;
+
+    &::-ms-expand {
+        display: none;
+    }
+
+    @include mixins.control-focus;
+    @include select-arrow-right;
+
+    @include mixins.dark-theme {
+        color: var(--color-white);
+    }
+
+    @include mixins.light-theme {
+        color: var(--color-white);
+    }
+
+    .option {
+        @include mixins.fix-height(fit-content);
+
+        border: none;
+        background-color: inherit;
+        font: inherit;
+        color: inherit;
+        cursor: inherit;
+        line-height: inherit;
+    }
+}
