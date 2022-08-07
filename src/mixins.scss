@@ -16,6 +16,27 @@
     }
 }
 
+@mixin any-theme {
+    @include dark-theme {
+        @content;
+    }
+
+    @include light-theme {
+        @content;
+    }
+}
+
+@mixin full-width-page {
+    position: relative;
+    left: calc(var(--eight-spaces) * -1);
+    width: calc(100% + (var(--eight-spaces) * 2));
+
+    @include sm {
+        left: calc(var(--five-spaces) * -1);
+        width: calc(100% + (var(--five-spaces) * 2));
+    }
+}
+
 @mixin selection {
     background: var(--color-primary);
 
@@ -59,4 +80,11 @@
 @mixin fix-size($size) {
     @include fix-width($size);
     @include fix-height($size);
+}
+
+@mixin control-focus {
+    &:focus {
+        border: var(--small-border) var(--color-primary);
+        box-shadow: inset 0 0 0 var(--one-space) var(--color-primary-opacity-24);
+    }
 }

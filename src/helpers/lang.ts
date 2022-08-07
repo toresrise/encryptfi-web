@@ -47,6 +47,11 @@ export class LangHelper implements Setup<Lang> {
         setHtmlAttr('lang', lang)
     }
 
+    change(lang: Lang) {
+        this.set(lang)
+        this.init()
+    }
+
     private getValidLangByPropName(propName: string): Lang | null {
         if (!isString(propName)) propName = ''
 

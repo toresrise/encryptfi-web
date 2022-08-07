@@ -6,8 +6,26 @@
         "keywords": "toresrise, encryptfi, anonymous, security, transparency, transfer, file, simple, send, anywhere, share, sharing, data, project, app, application, secure, web, speed, transparent, files, crypt, encrypt, free, software, auditable, anonymity, safe, site, easy, easily, best, link, help, code, themes, languages, lean, clean",
         "logo": "Encryptfi logo"
     },
+    "toresrise": {
+        "logo": "Toresrise logo",
+        "name": "Toresrise"
+    },
+    "enums": {
+        "langs": {
+            "enUs": "English (United States)",
+            "ptBr": "Portuguese (Brazil)"
+        }
+    },
+    "madeBy": {
+        "text": "Developed by"
+    },
     "header": {
         "donate": "Donate",
         "changeTheme": "Change theme"
+    },
+    "footer": {
+        "about": "About",
+        "contact": "Contact",
+        "lang": "Choose Encryptfi language"
     }
 }

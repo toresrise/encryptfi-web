@@ -10,6 +10,7 @@ body,
     height: 100%;
     line-height: 1.2;
     overflow-x: hidden;
+    font-weight: 400;
 
     @include mixins.dark-theme {
         color: var(--color-white);
@@ -40,8 +41,8 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    transition: color, background-color, border-bottom-color, border-left-color, border-right-color, border-top-color,
-        box-shadow;
+    transition: color, background-color, opacity, border, border-bottom-color, border-left-color, border-right-color,
+        border-top-color, box-shadow;
     transition-duration: var(--ms-transition);
 
     @include mixins.dark-theme {
@@ -64,4 +65,8 @@ img {
 
 ::selection {
     @include mixins.selection;
+}
+
+a {
+    text-decoration: underline;
 }

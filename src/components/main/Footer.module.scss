@@ -1,0 +1,50 @@
+@use 'src/mixins';
+
+.footer {
+    border-radius: var(--four-spaces) var(--four-spaces) 0 0;
+    font-size: 1rem;
+    background-color: var(--color-black);
+
+    .container {
+        border-radius: inherit;
+        display: flex;
+        flex-direction: column;
+        padding: var(--eight-spaces);
+        row-gap: var(--eight-spaces);
+
+        @include mixins.fix-size(100%);
+
+        @include mixins.sm {
+            padding: var(--five-spaces);
+            row-gap: var(--five-spaces);
+            align-items: center;
+        }
+
+        @include mixins.dark-theme {
+            background-color: var(--color-dark-grey-opacity-24);
+        }
+
+        @include mixins.light-theme {
+            background-color: var(--color-black);
+        }
+    }
+
+    .form {
+        width: fit-content;
+    }
+
+    @include mixins.any-theme {
+        color: var(--color-white);
+    }
+
+    @include mixins.sm {
+        @include mixins.full-width-page;
+
+        border-radius: 0;
+
+        .clickable {
+            text-align: center;
+            font-size: 1.85rem;
+        }
+    }
+}
