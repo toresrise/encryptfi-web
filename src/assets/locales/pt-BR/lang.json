@@ -10,6 +10,12 @@
         "logo": "Logo da Toresrise",
         "name": "Toresrise"
     },
+    "enums": {
+        "langs": {
+            "enUs": "Inglês (Estados Unidos)",
+            "ptBr": "Português (Brasil)"
+        }
+    },
     "madeBy": {
         "text": "Desenvolvido por"
     },
