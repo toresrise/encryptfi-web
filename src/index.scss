@@ -10,6 +10,7 @@ body,
     height: 100%;
     line-height: 1.2;
     overflow-x: hidden;
+    font-weight: 400;
 
     @include mixins.dark-theme {
         color: var(--color-white);
