@@ -81,3 +81,10 @@
     @include fix-width($size);
     @include fix-height($size);
 }
+
+@mixin control-focus{
+    &:focus{
+        border: var(--small-border) var(--color-primary);
+        box-shadow: inset 0 0 0 var(--one-space) var(--color-primary-opacity-24);
+    }
+}
