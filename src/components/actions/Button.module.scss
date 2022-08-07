@@ -29,6 +29,14 @@
         @include mixins.fix-size($icon);
 
         font-size: $icon;
+
+        @include mixins.dark-theme {
+            color: var(--color-white);
+        }
+
+        @include mixins.light-theme {
+            color: var(--color-black);
+        }
     }
 
     &.primary {
