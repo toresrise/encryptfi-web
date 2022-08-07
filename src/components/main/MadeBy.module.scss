@@ -3,7 +3,7 @@
 .madeBy {
     display: flex;
     align-items: center;
-    column-gap: var(--two-spaces);
+    gap: var(--two-spaces);
 
     .logo {
         @include mixins.fix-size(40px);
@@ -23,6 +23,20 @@
         &:hover,
         &:focus {
             opacity: 0.75;
+        }
+    }
+
+    @include mixins.sm {
+        flex-direction: column;
+        gap: var(--four-spaces);
+        justify-content: center;
+
+        .text {
+            text-align: center;
+        }
+
+        .logo {
+            @include mixins.fix-size(60px);
         }
     }
 }
