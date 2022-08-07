@@ -16,5 +16,9 @@
     "header": {
         "donate": "Donate",
         "changeTheme": "Change theme"
+    },
+    "footer": {
+        "about": "About",
+        "contact": "Contact"
     }
 }

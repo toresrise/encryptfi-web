@@ -16,5 +16,9 @@
     "header": {
         "donate": "Doar",
         "changeTheme": "Mudar tema"
+    },
+    "footer": {
+        "about": "Sobre",
+        "contact": "Contato"
     }
 }
