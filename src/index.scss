@@ -43,6 +43,14 @@ body {
     transition: color, background-color, opacity, border-bottom-color, border-left-color, border-right-color,
         border-top-color, box-shadow;
     transition-duration: var(--ms-transition);
+
+    @include mixins.dark-theme {
+        color: var(--color-white);
+    }
+
+    @include mixins.light-theme {
+        color: var(--color-black);
+    }
 }
 
 img {
