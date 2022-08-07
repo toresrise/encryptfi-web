@@ -25,6 +25,7 @@
     },
     "footer": {
         "about": "Sobre",
-        "contact": "Contato"
+        "contact": "Contato",
+        "lang": "Escolha o idioma do Encryptfi"
     }
 }
