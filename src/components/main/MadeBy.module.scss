@@ -1,0 +1,28 @@
+@use '/src/mixins';
+
+.madeBy {
+    display: flex;
+    align-items: center;
+    column-gap: var(--two-spaces);
+
+    .logo {
+        @include mixins.fix-size(40px);
+
+        border-radius: var(--half-space);
+    }
+
+    .text {
+        font-size: 1rem;
+        color: var(--color-white);
+    }
+
+    .link {
+        color: var(--color-primary-toresrise);
+        font-weight: 600;
+
+        &:hover,
+        &:focus {
+            opacity: 0.75;
+        }
+    }
+}
