@@ -40,8 +40,8 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    transition: color, background-color, opacity, border-bottom-color, border-left-color, border-right-color, border-top-color,
-        box-shadow;
+    transition: color, background-color, opacity, border-bottom-color, border-left-color, border-right-color,
+        border-top-color, box-shadow;
     transition-duration: var(--ms-transition);
 }
 
@@ -58,6 +58,6 @@ img {
     @include mixins.selection;
 }
 
-a{
+a {
     text-decoration: underline;
 }
