@@ -7,6 +7,8 @@ import React, { useMemo, useState } from 'react'
 import { Lang, LangHelper } from '~/helpers/lang'
 import { LangService } from '~/services/lang'
 import { EMAIL } from '~/helpers/constants'
+import { useDialog } from '~/hooks/useDialog'
+import { About } from '~/components/main/About'
 
 const langHelper = new LangHelper()
 const langService = new LangService()
@@ -14,6 +16,7 @@ const langService = new LangService()
 export const Footer: React.FC = () => {
     const [lang, setLang] = useState(langHelper.get())
     const langs = useMemo(() => langService.get(), [])
+    const { isOpen: isOpenAbout, setIsOpen: setIsOpenAbout } = useDialog()
 
     const changeLang = (lang: Lang) => {
         setLang(lang)
@@ -21,25 +24,28 @@ export const Footer: React.FC = () => {
     }
 
     return (
-        <footer className={styles.footer}>
-            <div className={styles.container}>
-                <form className={styles.form}>
-                    <Select label={'footer.lang'} name={'lang'} value={lang} set={changeLang} options={langs} />
-                </form>
-                <FooterClickable
-                    text={'footer.about'}
-                    onClick={() => alert('TODO ABOUT')}
-                    className={styles.clickable}
-                />
-                <FooterClickable
-                    text={'footer.contact'}
-                    layout={FooterClickableLayout.ANCHOR}
-                    href={`mailto:${EMAIL}`}
-                    className={styles.clickable}
-                />
-                <Break />
-                <MadeBy />
-            </div>
-        </footer>
+        <>
+            <footer className={styles.footer}>
+                <div className={styles.container}>
+                    <form className={styles.form}>
+                        <Select label={'footer.lang'} name={'lang'} value={lang} set={changeLang} options={langs} />
+                    </form>
+                    <FooterClickable
+                        text={'footer.about'}
+                        onClick={() => setIsOpenAbout(true)}
+                        className={styles.clickable}
+                    />
+                    <FooterClickable
+                        text={'footer.contact'}
+                        layout={FooterClickableLayout.ANCHOR}
+                        href={`mailto:${EMAIL}`}
+                        className={styles.clickable}
+                    />
+                    <Break />
+                    <MadeBy />
+                </div>
+            </footer>
+            <About isOpen={isOpenAbout} setIsOpen={setIsOpenAbout} />
+        </>
     )
 }
