@@ -52,6 +52,10 @@ body {
     @include mixins.light-theme {
         color: var(--color-black);
     }
+
+    &:not(html):not(body):not(#root) {
+        @include mixins.fancy-scroll;
+    }
 }
 
 img {
