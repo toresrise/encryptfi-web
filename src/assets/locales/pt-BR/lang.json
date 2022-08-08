@@ -27,5 +27,8 @@
         "about": "Sobre",
         "contact": "Contato",
         "lang": "Escolha o idioma do Encryptfi"
+    },
+    "about": {
+        "title": "Sobre"
     }
 }
