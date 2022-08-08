@@ -89,14 +89,14 @@
     }
 }
 
-@mixin fancy-scroll {
+@mixin fancy-scroll($radius: var(--one-space)) {
     &::-webkit-scrollbar {
         width: var(--two-spaces);
     }
 
     &::-webkit-scrollbar-thumb {
         background-color: var(--color-grey-opacity-72);
-        border-radius: var(--half-space);
+        border-radius: $radius;
 
         &:hover {
             background-color: var(--color-grey);
