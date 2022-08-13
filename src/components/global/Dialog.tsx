@@ -6,6 +6,7 @@ import { getRootElement } from '~/helpers/dom'
 import { uniqueId } from '~/helpers/unique-id'
 import styles from './Dialog.module.scss'
 import { MdClose } from 'react-icons/all'
+import { TitleSection } from '~/components/global/TitleSection'
 
 interface Props extends UseDialogProps {
     title: string
@@ -33,7 +34,7 @@ export const Dialog: React.FC<PropsWithChildren<Props>> = ({ title, isOpen, setI
             onRequestClose={() => close()}
         >
             <div className={styles.header}>
-                <h2 className={styles.title}>{t(title)}</h2>
+                <TitleSection title={title} />
                 <button className={styles.close} type={'button'} onClick={close} aria-label={t('dialog.close')}>
                     <MdClose aria-hidden={true} />
                 </button>
