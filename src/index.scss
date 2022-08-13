@@ -41,8 +41,8 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    transition-property: color, background-color, opacity, border, border-bottom-color, border-left-color, border-right-color,
-        border-top-color, box-shadow;
+    transition-property: color, background-color, opacity, border, border-bottom-color, border-left-color,
+        border-right-color, border-top-color, box-shadow;
     transition-duration: var(--ms-transition);
 
     @include mixins.dark-theme {
@@ -58,10 +58,11 @@ body {
     }
 
     svg {
-        &, *{
+        &,
+        * {
             @include mixins.clear-transition();
 
-            @include mixins.any-theme{
+            @include mixins.any-theme {
                 color: inherit;
             }
         }

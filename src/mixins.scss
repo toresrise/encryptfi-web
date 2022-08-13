@@ -82,14 +82,14 @@
     @include fix-height($size);
 }
 
-@mixin fix-icon($size){
+@mixin fix-icon($size) {
     @include fix-size($size);
 
     font-size: $size;
     line-height: $size;
 }
 
-@mixin clear-transition(){
+@mixin clear-transition() {
     transition-property: none;
     transition-duration: 0s;
 }
