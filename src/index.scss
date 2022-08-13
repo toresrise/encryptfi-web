@@ -42,7 +42,7 @@ body {
     padding: 0;
     margin: 0;
     transition-property: background-color, opacity, border, border-bottom-color, border-left-color, border-right-color,
-        border-top-color, box-shadow;
+        border-top-color, border-bottom-width, border-left-width, border-right-width, border-top-width, box-shadow;
     transition-duration: var(--ms-transition);
 
     &:not(html):not(body):not(#root) {
