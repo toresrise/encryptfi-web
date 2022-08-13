@@ -29,6 +29,10 @@
         "lang": "Escolha o idioma do Encryptfi"
     },
     "about": {
-        "title": "Sobre"
+        "title": "Sobre",
+        "text": "O Encryptfi é um produto da Toresrise para transferência de arquivos de forma anonima, segura, gratuita, rápida e fácil. Criamos essa plataforma para facilitar a vida das pessoas. A aplicação foi pensada por dois amigos (Alex e João) que são desenvolvedores de software, então é um projeto colaborativo e de código auditável. Esperamos que gostem, temos o desejo de continuar atualizando e aprimorando o aplicativo trazendo novas funcionalidades que temos na cabeça e que agregam valor para nosso usuário. Acreditamos em uma sociedade voluntaria, por isso nosso repositório é aberto, assim você pode testa-lo em seu próprio computador. Qualquer ajuda que precisar, fale conosco pelo nosso link de contato no rodapé da página, queremos ouvi-lo."
+    },
+    "dialog": {
+        "close": "Fechar pop-up"
     }
 }
