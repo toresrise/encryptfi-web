@@ -41,7 +41,7 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    transition: color, background-color, opacity, border, border-bottom-color, border-left-color, border-right-color,
+    transition-property: color, background-color, opacity, border, border-bottom-color, border-left-color, border-right-color,
         border-top-color, box-shadow;
     transition-duration: var(--ms-transition);
 
@@ -55,6 +55,16 @@ body {
 
     &:not(html):not(body):not(#root) {
         @include mixins.fancy-scroll;
+    }
+
+    svg {
+        &, *{
+            @include mixins.clear-transition();
+
+            @include mixins.any-theme{
+                color: inherit;
+            }
+        }
     }
 }
 

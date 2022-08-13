@@ -82,6 +82,18 @@
     @include fix-height($size);
 }
 
+@mixin fix-icon($size){
+    @include fix-size($size);
+
+    font-size: $size;
+    line-height: $size;
+}
+
+@mixin clear-transition(){
+    transition-property: none;
+    transition-duration: 0s;
+}
+
 @mixin control-focus {
     &:focus {
         border: var(--small-border) var(--color-primary);
