@@ -1,0 +1,76 @@
+@use '/src/mixins';
+
+.overlay {
+    background-color: var(--color-black-opacity-72);
+    position: fixed;
+    inset: 0;
+    padding: var(--eight-spaces);
+}
+
+.dialog {
+    $half-percent: 50%;
+
+    border-radius: var(--one-space);
+    position: absolute;
+    border: none;
+    overflow-y: auto;
+    overflow-x: hidden;
+    outline: none;
+    inset: var(--four-spaces);
+    padding: var(--four-spaces);
+    height: fit-content;
+    max-height: calc(100% - var(--sixteen-spaces));
+    top: $half-percent;
+    left: $half-percent;
+    transform: translate(-#{$half-percent}, -#{$half-percent});
+    width: calc(100% - var(--sixteen-spaces));
+    max-width: 846px;
+    word-break: break-word;
+    font-size: 1rem;
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: var(--four-spaces);
+        column-gap: var(--four-spaces);
+    }
+
+    .title {
+        font-size: 1.5rem;
+        font-weight: 600;
+    }
+
+    .close {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+            @include mixins.fix-icon(32px);
+        }
+
+        @include mixins.dark-theme {
+            color: var(--color-white);
+        }
+
+        @include mixins.light-theme {
+            color: var(--color-black);
+        }
+
+        &:focus,
+        &:hover {
+            @include mixins.any-theme {
+                color: var(--color-grey);
+            }
+        }
+    }
+
+    @include mixins.dark-theme {
+        background-color: var(--color-dark-grey);
+    }
+
+    @include mixins.light-theme {
+        background-color: var(--color-white);
+    }
+}
