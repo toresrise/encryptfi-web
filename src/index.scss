@@ -52,7 +52,7 @@ body {
     svg {
         &,
         * {
-            @include mixins.clear-transition();
+            @include mixins.color-transition();
 
             @include mixins.any-theme {
                 color: inherit;

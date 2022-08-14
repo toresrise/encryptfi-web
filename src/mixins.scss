@@ -95,9 +95,9 @@
     line-height: $size;
 }
 
-@mixin clear-transition() {
-    transition-property: none;
-    transition-duration: 0s;
+@mixin color-transition() {
+    transition-property: color;
+    transition-duration: var(--ms-transition);
 }
 
 @mixin control-focus {
