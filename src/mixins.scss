@@ -61,6 +61,12 @@
     }
 }
 
+@mixin lg {
+    @media (variables.$desktop-break) {
+        @content;
+    }
+}
+
 @mixin title {
     font-family: 'Lobster', cursive;
 }
