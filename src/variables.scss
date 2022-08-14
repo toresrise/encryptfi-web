@@ -1,10 +1,13 @@
 $mobile-break: 'max-width: 600px';
 $tablet-break: 'max-width: 800px';
+$desktop-break: 'max-width: 1200px';
 
 :root {
     --color-white: #fdfffc;
     --color-black: #0b0a0a;
+    --color-black-opacity-72: rgba(11, 10, 10, 0.72);
     --color-grey: #a5a5a5;
+    --color-grey-opacity-72: rgba(165, 165, 165, 0.72);
     --color-dark-grey: #333533;
     --color-dark-grey-opacity-24: rgba(51, 53, 51, 0.24);
     --color-primary: #a72cf4;
@@ -20,6 +23,7 @@ $tablet-break: 'max-width: 800px';
     --five-spaces: calc(var(--one-space) * 5);
     --six-spaces: calc(var(--one-space) * 6);
     --eight-spaces: calc(var(--one-space) * 8);
+    --sixteen-spaces: calc(var(--one-space) * 16);
     --ms-transition: 200ms;
     --small-border: 1px solid;
 }

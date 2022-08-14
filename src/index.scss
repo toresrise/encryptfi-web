@@ -41,16 +41,23 @@ body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    transition: color, background-color, opacity, border, border-bottom-color, border-left-color, border-right-color,
+    transition-property: background-color, opacity, border-bottom-color, border-left-color, border-right-color,
         border-top-color, box-shadow;
     transition-duration: var(--ms-transition);
 
-    @include mixins.dark-theme {
-        color: var(--color-white);
+    &:not(html):not(body):not(#root) {
+        @include mixins.fancy-scroll;
     }
 
-    @include mixins.light-theme {
-        color: var(--color-black);
+    svg {
+        &,
+        * {
+            @include mixins.color-transition();
+
+            @include mixins.any-theme {
+                color: inherit;
+            }
+        }
     }
 }
 

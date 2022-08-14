@@ -27,5 +27,12 @@
         "about": "About",
         "contact": "Contact",
         "lang": "Choose Encryptfi language"
+    },
+    "about": {
+        "title": "About",
+        "text": "Encryptfi is a Toresrise product for anonymous, secure, free, fast and easy file transfer. We created this platform to make people's lives easier. The application was designed by two friends (Alex and João) who are software developers, so it is a collaborative project with auditable code. We hope you like it, we have the desire to continue updating and improving the application, bringing new features that we have in mind and that add value to our user. We believe in a voluntary society, so our repository is open, so you can test it on your own computer. Any help you need, contact us through our contact link at the bottom of the page, we want to hear from you."
+    },
+    "dialog": {
+        "close": "Close popup"
     }
 }
