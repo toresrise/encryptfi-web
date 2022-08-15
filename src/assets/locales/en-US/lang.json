@@ -34,5 +34,11 @@
     },
     "dialog": {
         "close": "Close popup"
+    },
+    "access": {
+        "title": "Access files"
+    },
+    "upload": {
+        "title": "Added files"
     }
 }
